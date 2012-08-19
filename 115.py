@@ -57,8 +57,8 @@ class Hack_115:
 
 
 accounts_here = [
-    {"account":'50493437','password':'lailinfeng'},
-    {"account":'50326789','password':'lailinfeng'},
+    {"account":'115115115','password':'000000'},
+    {"account":'116116116','password':'000000'},
     ]
 
 if __name__ == '__main__':
