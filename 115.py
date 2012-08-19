@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
+accounts_here = [
+    {"account":'115115115','password':'000000'},
+    {"account":'116116116','password':'000000'},
+]
 
 import urllib
 import urllib2
@@ -54,12 +58,6 @@ class Here115:
     str=u'\n获取空间：%s, 总空间：%s, 已使用：%s, 获取雨露：%d\n' % (res_json['picked'], res_json['total_size'], res_json['used_percent'], res_json['exp'])
     print str.encode("u8")
 
-
-
-accounts_here = [
-    {"account":'115115115','password':'000000'},
-    {"account":'116116116','password':'000000'},
-    ]
 
 if __name__ == '__main__':
   h = Here115()
