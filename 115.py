@@ -7,7 +7,7 @@ import cookielib
 import json
 import re,time
 
-class Hack_115:
+class Here115:
   def __init__(self):
     t=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     print(t)
@@ -62,9 +62,9 @@ accounts_here = [
     ]
 
 if __name__ == '__main__':
-  l = Hack_115()
+  h = Here115()
   for i in accounts_here:
-    if not l.login(i['account'],i['password']):
+    if not h.login(i['account'],i['password']):
       continue
-    l.pick_space()
+    h.pick_space()
 
