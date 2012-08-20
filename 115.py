@@ -22,19 +22,21 @@ class Here115:
 
   def login(self, username, password):
     url = 'https://passport.115.com/?ac=login'
-    data = urllib.urlencode({'back':'http://www.115.com', 'goto':'http://115.com', 'login[account]':username, 'login[passwd]':password})
+    data = urllib.urlencode({'login[account]':username, 'login[passwd]':password,'login[time]':'on'})
     req = urllib2.Request(url, data)
     try:
       fd = self.opener.open(req)
     except Exception, e:
       print('网络连接错误！')
       return False
+    res=fd.read()
     fd.close()
-    if not re.search('error_code', fd.url):
+    if re.search('location\.href="http://115.com"', res) == None:
       print('%s 密码不正确！\n' % username)
       return False
-    print('%s 登陆成功，准备摇奖..   ' % username),
-    return True
+    else:
+      print('%s 登陆成功，准备摇奖..   ' % username),
+      return True
 
   def pick_space(self):
     url = 'http://115.com/?ct=file&ac=userfile&aid=1&cid=0&tpl=list_pg&limit=30'
