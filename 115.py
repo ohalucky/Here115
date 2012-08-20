@@ -15,7 +15,7 @@ import os,sys,datetime
 
 startTime = time.localtime()
 strStartTime = time.strftime('%Y-%m-%d %H:%M:%S', startTime)
-f=open('here115.txt','a')
+f=open(filename ,'a')
 f.write(strStartTime+':\t')
 #f.close()
 
